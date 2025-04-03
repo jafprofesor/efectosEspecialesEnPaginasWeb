@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Avanzado de Rollover</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .contenedor {
+        text-align: center;
+        margin: 30px 0;
+      }
+      .boton-rollover {
+        display: inline-block;
+        width: 200px;
+        height: 80px;
+        background-image: url("imagenes/boton-normal.svg");
+        background-size: cover;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-image 0.3s ease;
+      }
+      .boton-rollover:hover {
+        background-image: url("imagenes/boton-hover.svg");
+      }
+      .codigo {
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 15px;
+        margin: 20px 0;
+        overflow-x: auto;
+      }
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+      .volver {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+      }
+      .volver:hover {
+        background-color: #2980b9;
+      }
+      /* Ejemplo de sprite */
+      .boton-sprite {
+        display: inline-block;
+        width: 200px;
+        height: 80px;
+        background-image: url("imagenes/boton-sprite.svg");
+        background-position: 0 0;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 30px;
+      }
+      .boton-sprite:hover {
+        background-position: 0 -80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplo Avanzado de Rollover</h1>
+
+    <p>
+      Este es un ejemplo avanzado de efecto rollover utilizando CSS. Pasa el
+      cursor sobre los botones para ver los diferentes efectos.
+    </p>
+
+    <div class="contenedor">
+      <div class="boton-rollover"></div>
+      <p><em>Rollover con CSS usando dos imágenes</em></p>
+
+      <div class="boton-sprite"></div>
+      <p><em>Rollover con CSS usando una imagen sprite</em></p>
+    </div>
+
+    <h2>Cómo funciona</h2>
+    <p>El efecto se logra mediante CSS, sin necesidad de JavaScript:</p>
+
+    <div class="codigo">
+      <pre><code>/* HTML */
+&lt;div class="boton-rollover"&gt;&lt;/div&gt;
+
+/* CSS - Usando dos imágenes */
+.boton-rollover {
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    background-image: url('imagenes/boton-normal.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+.boton-rollover:hover {
+    background-image: url('imagenes/boton-hover.svg');
+}</code></pre>
+    </div>
+
+    <p>
+      También se puede implementar usando una sola imagen (sprite) que contiene
+      ambos estados:
+    </p>
+
+    <div class="codigo">
+      <pre><code>/* HTML */
+&lt;div class="boton-sprite"&gt;&lt;/div&gt;
+
+/* CSS - Usando una imagen sprite */
+.boton-sprite {
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    background-image: url('imagenes/boton-sprite.svg');
+    background-position: 0 0;
+    cursor: pointer;
+}
+.boton-sprite:hover {
+    background-position: 0 -80px;
+}</code></pre>
+    </div>
+
+    <h2>Ventajas y desventajas</h2>
+    <p><strong>Ventajas:</strong></p>
+    <ul>
+      <li>No requiere JavaScript</li>
+      <li>Mejor rendimiento</li>
+      <li>Las imágenes se precargan automáticamente</li>
+      <li>Transiciones más suaves</li>
+      <li>Con sprites, se reduce el número de solicitudes HTTP</li>
+    </ul>
+
+    <p><strong>Desventajas:</strong></p>
+    <ul>
+      <li>Requiere conocimientos de CSS</li>
+      <li>Los sprites pueden ser más difíciles de mantener</li>
+    </ul>
+
+    <p>
+      <a href="../index.html" class="volver">Volver a la página principal</a>
+    </p>
+  </body>
+</html>

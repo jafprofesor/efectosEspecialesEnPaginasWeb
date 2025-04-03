@@ -1,0 +1,79 @@
+/* Efectos de transición CSS */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Ejemplo 1: Transición de color */
+.cambio-color {
+  width: 200px;
+  height: 100px;
+  background-color: #3498db;
+  transition: background-color 0.5s ease;
+}
+
+.cambio-color:hover {
+  background-color: #e74c3c;
+}
+
+/* Ejemplo 2: Sombra de texto */
+.sombra-texto {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: text-shadow 0.3s ease;
+}
+
+.sombra-texto:hover {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Ejemplo 3: Degradado de texto */
+.degradado-texto {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.degradado-texto:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+/* Ejemplo 4: Animación con keyframes */
+@keyframes cambiar-color {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #e74c3c;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.animacion-keyframes {
+  width: 200px;
+  height: 100px;
+  background-color: #3498db;
+  animation: cambiar-color 4s infinite;
+}

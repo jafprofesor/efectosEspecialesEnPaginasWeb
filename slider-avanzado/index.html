@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Avanzado</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <h1>Slider Avanzado</h1>
+
+    <div class="slider-container">
+      <div class="slider">
+        <img src="imagenes/montana.svg" alt="Montaña" class="slide active" />
+        <img src="imagenes/playa.svg" alt="Playa" class="slide" />
+        <img src="imagenes/ciudad.svg" alt="Ciudad" class="slide" />
+        <img src="imagenes/bosque.svg" alt="Bosque" class="slide" />
+      </div>
+
+      <div class="controls">
+        <button class="prev">Anterior</button>
+        <button class="next">Siguiente</button>
+        <button class="toggle-autoplay">Pausar</button>
+      </div>
+
+      <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+    </div>
+
+    <p>
+      <a href="../index.html" class="volver">Volver a la página principal</a>
+    </p>
+
+    <div class="contenedor">
+      <h2>Cómo funciona</h2>
+      <p>
+        Este slider avanzado utiliza JavaScript para cambiar entre imágenes de
+        forma suave con transiciones CSS. Incluye controles de navegación
+        (anterior/siguiente), indicadores de posición (dots) y autoplay.
+      </p>
+
+      <div class="codigo">
+        <pre><code>// Ejemplo básico del código JavaScript
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+}</code></pre>
+      </div>
+
+      <h2>Ventajas y desventajas</h2>
+      <p><strong>Ventajas:</strong></p>
+      <ul>
+        <li>Transiciones suaves con CSS</li>
+        <li>Navegación completa (botones y dots)</li>
+        <li>Funcionalidad de autoplay</li>
+        <li>Responsive y adaptable</li>
+      </ul>
+
+      <p><strong>Desventajas:</strong></p>
+      <ul>
+        <li>Requiere JavaScript</li>
+        <li>Mayor complejidad de implementación</li>
+        <li>Las imágenes no se precargan automáticamente</li>
+      </ul>
+    </div>
+
+    <script src="js/slider.js"></script>
+  </body>
+</html>

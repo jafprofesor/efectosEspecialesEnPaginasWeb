@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Imágenes - Ejemplo Básico</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Galería de Imágenes - Ejemplo Básico</h1>
+
+      <p class="descripcion">
+        Este es un ejemplo básico de una galería de imágenes implementada con
+        JavaScript simple. Permite navegar entre varias imágenes utilizando los
+        botones anterior y siguiente.
+      </p>
+
+      <!-- Contenedor principal de la galería -->
+      <div class="galeria">
+        <!-- Botón para ir a la imagen anterior -->
+        <button id="btn-anterior" class="btn-navegacion">
+          &#10094; Anterior
+        </button>
+
+        <!-- Contenedor de la imagen actual -->
+        <div class="contenedor-imagen">
+          <img id="imagen-actual" src="imagenes/imagen1.jpg" alt="Imagen 1" />
+          <p id="descripcion-imagen" class="descripcion-imagen">
+            Imagen 1: Paisaje montañoso
+          </p>
+        </div>
+
+        <!-- Botón para ir a la imagen siguiente -->
+        <button id="btn-siguiente" class="btn-navegacion">
+          Siguiente &#10095;
+        </button>
+      </div>
+
+      <!-- Sección de explicación del código -->
+      <div class="explicacion">
+        <h2>Explicación del Código</h2>
+
+        <h3>HTML</h3>
+        <div class="codigo">
+          <pre><code>&lt;!-- Estructura básica de la galería --&gt;
+&lt;div class="galeria"&gt;
+  &lt;button id="btn-anterior" class="btn-navegacion"&gt;&#10094; Anterior&lt;/button&gt;
+  
+  &lt;div class="contenedor-imagen"&gt;
+    &lt;img id="imagen-actual" src="imagenes/imagen1.jpg" alt="Imagen 1"&gt;
+    &lt;p id="descripcion-imagen" class="descripcion-imagen"&gt;Descripción de la imagen&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;button id="btn-siguiente" class="btn-navegacion"&gt;Siguiente &#10095;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3>JavaScript</h3>
+        <div class="codigo">
+          <pre><code>// Array con la información de las imágenes
+const imagenes = [
+  { src: 'imagenes/imagen1.jpg', alt: 'Imagen 1', descripcion: 'Descripción 1' },
+  { src: 'imagenes/imagen2.jpg', alt: 'Imagen 2', descripcion: 'Descripción 2' },
+  // Más imágenes...
+];
+
+// Variables para los elementos del DOM
+let indiceActual = 0;
+const imagenActual = document.getElementById('imagen-actual');
+const descripcionImagen = document.getElementById('descripcion-imagen');
+
+// Función para mostrar la imagen actual
+function mostrarImagen(indice) {
+  imagenActual.src = imagenes[indice].src;
+  imagenActual.alt = imagenes[indice].alt;
+  descripcionImagen.textContent = imagenes[indice].descripcion;
+}
+
+// Eventos para los botones de navegación
+btnAnterior.addEventListener('click', function() {
+  indiceActual = (indiceActual > 0) ? indiceActual - 1 : imagenes.length - 1;
+  mostrarImagen(indiceActual);
+});
+
+btnSiguiente.addEventListener('click', function() {
+  indiceActual = (indiceActual < imagenes.length - 1) ? indiceActual + 1 : 0;
+  mostrarImagen(indiceActual);
+});</code></pre>
+        </div>
+      </div>
+
+      <p>
+        <a href="../index.html" class="volver">Volver a la página principal</a>
+      </p>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/galeria.js"></script>
+  </body>
+</html>

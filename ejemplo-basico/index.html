@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Básico de Rollover</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .contenedor {
+        text-align: center;
+        margin: 30px 0;
+      }
+      .imagen-rollover {
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+      }
+      .codigo {
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 15px;
+        margin: 20px 0;
+        overflow-x: auto;
+      }
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+      .volver {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+      }
+      .volver:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplo Básico de Rollover</h1>
+
+    <p>
+      Este es un ejemplo básico de efecto rollover (cambio de imagen al pasar el
+      cursor) utilizando JavaScript. Pasa el cursor sobre la imagen para ver el
+      efecto.
+    </p>
+
+    <div class="contenedor">
+      <img
+        id="imagenRollover"
+        src="imagenes/boton-normal.svg"
+        alt="Botón"
+        class="imagen-rollover"
+        width="200"
+        height="80"
+      />
+    </div>
+
+    <h2>Cómo funciona</h2>
+    <p>
+      El efecto se logra mediante eventos de JavaScript que cambian el atributo
+      <code>src</code> de la imagen cuando el cursor pasa sobre ella:
+    </p>
+
+    <div class="codigo">
+      <pre><code>// HTML
+&lt;img id="imagenRollover" src="imagenes/boton-normal.svg" alt="Botón"&gt;
+
+// JavaScript
+const imagen = document.getElementById('imagenRollover');
+
+imagen.addEventListener('mouseover', function() {
+    this.src = 'imagenes/boton-hover.svg';
+});
+
+imagen.addEventListener('mouseout', function() {
+    this.src = 'imagenes/boton-normal.svg';
+});</code></pre>
+    </div>
+
+    <h2>Ventajas y desventajas</h2>
+    <p><strong>Ventajas:</strong></p>
+    <ul>
+      <li>Fácil de implementar</li>
+      <li>Compatible con navegadores antiguos</li>
+      <li>No requiere CSS avanzado</li>
+    </ul>
+
+    <p><strong>Desventajas:</strong></p>
+    <ul>
+      <li>
+        La imagen secundaria se carga solo cuando se necesita, lo que puede
+        causar un retraso
+      </li>
+      <li>Requiere JavaScript para funcionar</li>
+      <li>Más código que la solución con CSS</li>
+    </ul>
+
+    <p>
+      <a href="../index.html" class="volver">Volver a la página principal</a>
+    </p>
+
+    <script>
+      // Script para el efecto de rollover
+      const imagen = document.getElementById("imagenRollover");
+
+      // Precarga de la imagen secundaria para evitar retrasos
+      const imagenHover = new Image();
+      imagenHover.src = "imagenes/boton-hover.svg";
+
+      imagen.addEventListener("mouseover", function () {
+        this.src = "imagenes/boton-hover.svg";
+      });
+
+      imagen.addEventListener("mouseout", function () {
+        this.src = "imagenes/boton-normal.svg";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Fondo de cielo nocturno con degradado -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000033"/>
+      <stop offset="100%" stop-color="#191970"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Luna -->
+  <circle cx="650" cy="80" r="40" fill="#FFFAFA"/>
+  <circle cx="630" cy="70" r="15" fill="url(#skyGradient)"/>
+  
+  <!-- Estrellas -->
+  <circle cx="100" cy="50" r="2" fill="#FFFFFF"/>
+  <circle cx="150" cy="80" r="1" fill="#FFFFFF"/>
+  <circle cx="200" cy="40" r="1.5" fill="#FFFFFF"/>
+  <circle cx="250" cy="70" r="1" fill="#FFFFFF"/>
+  <circle cx="300" cy="30" r="2" fill="#FFFFFF"/>
+  <circle cx="350" cy="60" r="1.5" fill="#FFFFFF"/>
+  <circle cx="400" cy="20" r="1" fill="#FFFFFF"/>
+  <circle cx="450" cy="90" r="2" fill="#FFFFFF"/>
+  <circle cx="500" cy="40" r="1" fill="#FFFFFF"/>
+  <circle cx="550" cy="70" r="1.5" fill="#FFFFFF"/>
+  <circle cx="700" cy="30" r="1" fill="#FFFFFF"/>
+  <circle cx="750" cy="60" r="2" fill="#FFFFFF"/>
+  
+  <!-- Estrellas fugaces -->
+  <line x1="300" y1="100" x2="350" y2="150" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+  <line x1="500" y1="80" x2="550" y2="130" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+  
+  <!-- Montañas en silueta -->
+  <polygon points="0,200 100,150 200,180 300,140 400,170 500,130 600,160 700,140 800,180 800,400 0,400" fill="#000000"/>
+  
+  <!-- Lago reflejando la luna -->
+  <path d="M0,250 C200,230 600,270 800,240 L800,400 L0,400 Z" fill="#000033" opacity="0.8"/>
+  <ellipse cx="650" cy="250" rx="20" ry="40" fill="#FFFAFA" opacity="0.2"/>
+  
+  <!-- Silueta de árboles -->
+  <polygon points="100,200 120,150 140,200" fill="#000000"/>
+  <polygon points="160,200 180,130 200,200" fill="#000000"/>
+  <polygon points="600,200 620,140 640,200" fill="#000000"/>
+  <polygon points="660,200 680,160 700,200" fill="#000000"/>
+  
+  <!-- Texto descriptivo -->
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" fill="#FFFFFF">Noche estrellada</text>
+</svg>

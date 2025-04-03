@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- Fondo de cielo con degradado de mediodía en el desierto -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E90FF"/>
+      <stop offset="100%" stop-color="#87CEEB"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Sol -->
+  <circle cx="400" cy="80" r="50" fill="#FFFF00"/>
+  <circle cx="400" cy="80" r="60" fill="#FFFF00" opacity="0.3"/>
+  <circle cx="400" cy="80" r="70" fill="#FFFF00" opacity="0.1"/>
+  
+  <!-- Desierto -->
+  <rect x="0" y="200" width="800" height="200" fill="#F4A460"/>
+  
+  <!-- Dunas de arena -->
+  <path d="M0,200 C100,180 200,220 300,200 C400,180 500,220 600,200 C700,180 800,220 800,200 L800,400 L0,400 Z" fill="#DAA520"/>
+  
+  <!-- Cactus 1 -->
+  <rect x="150" y="150" width="10" height="50" fill="#006400"/>
+  <rect x="140" y="170" width="30" height="10" fill="#006400"/>
+  <rect x="130" y="150" width="10" height="30" fill="#006400"/>
+  
+  <!-- Cactus 2 -->
+  <rect x="600" y="170" width="15" height="60" fill="#006400"/>
+  <rect x="585" y="190" width="45" height="15" fill="#006400"/>
+  <rect x="615" y="150" width="15" height="40" fill="#006400"/>
+  
+  <!-- Piedras -->
+  <ellipse cx="250" cy="250" rx="15" ry="10" fill="#A0522D"/>
+  <ellipse cx="270" cy="260" rx="10" ry="7" fill="#8B4513"/>
+  <ellipse cx="500" cy="270" rx="20" ry="12" fill="#A0522D"/>
+  <ellipse cx="530" cy="260" rx="12" ry="8" fill="#8B4513"/>
+  
+  <!-- Espejismo -->
+  <ellipse cx="400" cy="300" rx="100" ry="20" fill="#87CEEB" opacity="0.3"/>
+  
+  <!-- Texto descriptivo -->
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" fill="#333333">Desierto al mediodía</text>
+</svg>
