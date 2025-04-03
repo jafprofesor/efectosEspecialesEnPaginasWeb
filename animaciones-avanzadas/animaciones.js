@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.to(".caja", {
     // Selecciona la caja a animar
     duration: 2, // Duración de la animación en segundos
-    x: 200, // Desplazamiento horizontal
+    x: 200,
+    y: 200, // Desplazamiento horizontal
     rotation: 360, // Rotación en grados
     ease: "bounce.out", // Tipo de easing, easing es el tipo de animación
     // existen muchos tipos de easing en la documentación de GSAP, como bounce, elastic, etc.
@@ -20,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Selecciona el elemento de texto
     duration: 10, // Duración de la animación en segundos
     x: -1000, // Desplazamiento horizontal
-    repeat: -1, // Repetir la animación infinitamente
+    repeat: -1,
+    yoyo: true, // Repetir la animación infinitamente
     ease: "none", // Sin easing
   });
 
@@ -29,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
   boton.addEventListener("click", () => {
     gsap.to(boton, {
       // Selecciona el botón
-      duration: 0.5, // Duración de la animación en segundos
+      duration: 0.2, // Duración de la animación en segundos
       scale: 1.2, // Escala del botón
       backgroundColor: "#e74c3c", // Cambio de color de fondo
       yoyo: true, // Hacer que la animación vaya y vuelta
-      repeat: 1, // Repetir la animación una vez
+      repeat: 3, // Repetir la animación una vez
     });
   });
 });

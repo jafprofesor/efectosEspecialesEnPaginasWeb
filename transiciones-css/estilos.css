@@ -55,7 +55,7 @@ h1 {
 }
 
 .degradado-texto:hover {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(to right, #00c6ff, #0061d8f4);
 }
 
 /* Ejemplo 4: Animación con keyframes */
